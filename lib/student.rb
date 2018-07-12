@@ -54,7 +54,7 @@ class Student
       SELECT COUNT (*)
       FROM students
       WHERE grade = 10
-      LIMIT = ?
+      LIMIT ?
       SQL
 
       DB[:conn].execute(sql).map {|row| self.new_from_db(row)}
