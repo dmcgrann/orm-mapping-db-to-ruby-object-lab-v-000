@@ -65,6 +65,7 @@ class Student
       SELECT *
       FROM students
       WHERE grade = 10
+      LIMIT 1 ASC
       SQL
 
       DB[:conn].execute(sql).each {|row| self.new_from_db(row)}
