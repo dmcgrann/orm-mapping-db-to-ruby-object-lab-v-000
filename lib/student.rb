@@ -67,7 +67,7 @@ class Student
       WHERE grade = 10
       SQL
 
-      DB[:conn].execute(sql, students).each {|row| self.new_from_db(row)}
+      DB[:conn].execute(sql).each {|row| self.new_from_db(row)}
   def save
     sql = <<-SQL
       INSERT INTO students (name, grade)
